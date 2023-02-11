@@ -1,0 +1,13 @@
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .signin-button a {
+    background-color: green;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
