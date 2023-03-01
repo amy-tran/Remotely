@@ -1,7 +1,15 @@
+.signin-button a {
+  background-color: #66A473;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex;
     padding: 10px 20px;
   }
   
@@ -12,8 +20,8 @@ nav {
   
   nav ul {
     display: flex;
-    margin: 0;
-    padding: 0;
+    margin-right : 500px;
+    margin-left: 100px;
   }
   
   nav li {
@@ -24,14 +32,19 @@ nav {
     text-decoration: none;
     color: black;
   }
-  
-.signin-button a {
-    background-color: #66A473;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-}
+
+  .workspace-thing{
+    margin-right:100px;
+    margin-left:-350px;
+  }
+
+  .enterprise-thing{
+    margin-right:100px;
+  }
+
+  .contact-thing{
+    margin-right:100px;
+  }
 
 .container {
     display: flex;
@@ -46,12 +59,14 @@ nav {
     text-align: center;
 }
   
-.image-section {
-    width: 60%;
+/* .image-section {
+    width: 100px;
+    height:135%;
     background-image: url(image.jpg);
     background-size: cover;
     background-position: center;
-}
+    margin-left: 500px;
+} */
 
 .dropdown {
     position: relative;
@@ -133,3 +148,42 @@ textarea {
   border-radius: 5px;
   cursor: pointer;
 }
+
+.container-stuffs {
+  position: relative;
+}
+
+/* .sign-in-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+/*   
+.sign-in-button{
+  margin-top:-600px;
+  margin-right: 500px;
+  /* top: 100px; */
+  /* left: 50%; */
+  /* height: 200px; */
+  /* transform: translate(100%, 100%); */
+  /* } */ */
+
+  .container {
+    position: relative;
+	  width: 40%;
+	  border: 2px solid blue;	
+  }
+.image-section {
+     width: 100%;
+	 
+  }
+.button{
+  position: absolute;
+	padding: 16px;
+	background-color: green;
+	border-radius: 16px;
+	bottom: 10px;
+	left: 200px;
+	width: 100px;
+  }
