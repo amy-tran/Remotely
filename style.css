@@ -15,7 +15,7 @@ nav {
     justify-content: space-between;
     align-items: flex;
     padding: 1% 2%;
-    padding-left:3%
+    padding-left:5%
   }
   
   nav img {
@@ -26,11 +26,11 @@ nav {
   nav ul {
     display: flex;
     margin-right : 26%;
-    margin-left: 5%;
+    margin-left: 4%;
   }
   
   nav li {
-    margin: 0% 5px;
+    margin: 0% 0.5%;
   }
   
   nav a {
@@ -71,13 +71,14 @@ nav {
     justify-content: space-between;
     align-items: center;
     height: 80vh;
+    margin-left:2%;
 }
   
 .text-section {
     margin-bottom:20%;
     text-align: left;
     margin-left:4%;
-    margin-right:25%;
+    margin-right:22%;
 }
 .text-section h1{
   color: #66A473;
@@ -104,13 +105,15 @@ nav {
 } */
 
 .dropdown_label{
-  font-size:85%
+  font-size:85%;
+  margin-bottom:0%;
 }
   
 .dropdown-button {
     background-color: white;
     color: black;
     padding:  3% 6%;
+    padding-right:0%;
     border: none;
     cursor: pointer;
 }
@@ -119,14 +122,16 @@ nav {
     display: none;
     position: absolute;
     background-color: white;
-    min-width: 16.5%;
+    min-width: 17.5%;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    padding-bottom:1%;
 }
   
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
 
 .dropdown_container{
   border: gray solid 1px;
