@@ -1,31 +1,36 @@
 .signin-button a {
   background-color: #66A473;
   color: white;
-  padding: 10px 15px;
-  border-radius: 5px;
+  top:34%;
+  right:40%;
+  border-radius: 10%;
   text-decoration: none;
+  /* position:absolute; */
+  position:relative;
+  padding: 15px 50px;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: flex;
-    padding: 10px 20px;
+    padding: 1% 2%;
+    padding-left:3%
   }
   
   nav img {
-    height: 60px;
+    height: 65px;
     width: auto;
   }
   
   nav ul {
     display: flex;
-    margin-right : 500px;
-    margin-left: 100px;
+    margin-right : 26%;
+    margin-left: 5%;
   }
   
   nav li {
-    margin: 0 20px;
+    margin: 0% 5px;
   }
   
   nav a {
@@ -34,16 +39,31 @@ nav {
   }
 
   .workspace-thing{
-    margin-right:100px;
-    margin-left:-350px;
+    margin-right:45%;
+    margin-left:-105%;
+    margin-top:4%;
+    font-size:90%;
+    font-weight:bolder;
   }
 
   .enterprise-thing{
-    margin-right:100px;
+    margin-right:45%;
+    margin-top:4%;
+    font-size:90%;
+    font-weight:bolder;
   }
 
   .contact-thing{
-    margin-right:100px;
+    margin-right:45%;
+    margin-top:4%;
+    font-size:90%;
+    font-weight:bolder;
+  }
+
+  .logo_thing{
+    margin-top:10%;
+    margin-left:3%;
+    font-size:139%
   }
 
 .container {
@@ -54,11 +74,21 @@ nav {
 }
   
 .text-section {
-    width: 40%;
-    padding: 20px;
-    text-align: center;
+    margin-bottom:20%;
+    text-align: left;
+    margin-left:4%;
+    margin-right:25%;
 }
-  
+.text-section h1{
+  color: #66A473;
+  line-height:125%
+}
+
+.text-section p{
+  color:gray;
+  line-height:150%
+}
+
 /* .image-section {
     width: 100px;
     height:135%;
@@ -68,24 +98,28 @@ nav {
     margin-left: 500px;
 } */
 
-.dropdown {
+/* .dropdown {
     position: relative;
     display: inline-block;
+} */
+
+.dropdown_label{
+  font-size:85%
 }
   
 .dropdown-button {
     background-color: white;
     color: black;
-    padding: 10px 20px;
+    padding:  3% 6%;
     border: none;
     cursor: pointer;
 }
-  
+
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: white;
-    min-width: 160px;
+    min-width: 16.5%;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
@@ -93,7 +127,24 @@ nav {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+.dropdown_container{
+  border: gray solid 1px;
+  border-radius:5%;
+  width:70%;
+  color:gray;
+  font-weight:bolder;
+  font-size:105%;
+  display:flex;
+  justify-content:flex-start;
+  vertical-align: middle;
+}
   
+.dropdown_container p{
+  margin-top:-1.5%;
+  margin-bottom:0%;
+  margin-left:4%;
+}
 .location-item {
     display: flex;
     align-items: center;
@@ -107,6 +158,16 @@ nav {
   
 .location-item span {
     font-size: 16px;
+}
+
+.location-marker{
+  height:16px;
+}
+
+.location-triangle{
+  height:16px;
+  margin-left:26%;
+  margin-top:1%;
 }
   
 .contact {
@@ -186,4 +247,13 @@ textarea {
 	bottom: 10px;
 	left: 200px;
 	width: 100px;
+  }
+
+  .logo{
+    display:flex;
+    justify-content:center;
+  }
+
+  body{
+    font-family:inter;
   }

@@ -5,49 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
     <title>Remotely</title>
-    <nav>
-        <div class="logo">
-          <img src="assets/Remotely_Logo.png" alt="Remotely Logo">
-        </div>
-        <ul>
-          <a class="workspace-thing" href="#workspaces">Workspaces</a>
-          <a class="enterprise-thing" href="#enterprise">Enterprise</a>
-          <a class="contact-thing" href="#contact">Contact</a>
-        </ul>
-        
-      </nav>
 </head>
 <body>
+  <nav>
+    <div class="logo">
+      <img src="assets/Remotely_Logo.png" alt="Remotely Logo">
+      <h3 class="logo_thing">Remotely</h3>
+    </div>
+    <ul>
+      <a class="workspace-thing" href="#workspaces">Workspaces</a>
+      <a class="enterprise-thing" href="#enterprise">Enterprise</a>
+      <a class="contact-thing" href="#contact">Contact</a>
+    </ul>
+    <div class="signin-button">
+      <a href="#signin">Sign In</a>
+    </div>
+  </nav>
     <div class="container">
         <div class="text-section">
           <h1>Find your ideal curated space</h1>
           <p>Whether you’re a team of one, a growing startup, or a Fortune 500 company—we have solutions for all the ways you work.</p>
+          <p class="dropdown_label">Find workspaces in</p>
+          <div class="dropdown">
+            <button class="dropdown-button dropdown_container">
+              <img class="location-marker" src="assets/location_marker.webp">
+              <p>SF Bay Area</p>
+              <img class='location-triangle' src="assets/down-triangle.jpg">
+            </button>
+            <div class="dropdown-content">
+              <div class="location-item dropdown-button">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Bay Area, CA</span>
+              </div>
+              <div class="location-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Orange County, CA</span>
+              </div>
+              <div class="location-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Los Angeles, CA</span>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="image-selection">
-          <img src="assets/People_in_Cafe.png" alt="People in a Cafe"> </div>
-        <div class="button">
-          <a href="#signin">Sign In</a>
+          <img src="assets/People_in_Cafe.png" alt="People in a Cafe"> 
         </div>
     </div>
-
     
-      <div class="dropdown">
-        <button class="dropdown-button">Find workspaces in</button>
-        <div class="dropdown-content">
-          <div class="location-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <span>Bay Area, CA</span>
-          </div>
-          <div class="location-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <span>Orange County, CA</span>
-          </div>
-          <div class="location-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <span>Los Angeles, CA</span>
-          </div>
-        </div>
-      </div>
 </body>
 </html>
