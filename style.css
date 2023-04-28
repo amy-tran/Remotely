@@ -10,6 +10,19 @@
   padding: 15px 50px;
 }
 
+#user{
+  background-color: #66A473;
+  color: white;
+  top:34%;
+  right:40%;
+  border-radius: 10%;
+  text-decoration: none;
+  /* position:absolute; */
+  position:relative;
+  padding: 15px 50px;
+  display:none;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
