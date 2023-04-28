@@ -280,3 +280,77 @@ textarea {
   body{
     font-family:inter;
   }
+
+  /* workspaces page */
+
+.workspaceText{
+  color:#66A473;
+  margin-left:10%;
+}
+
+hr{
+  height:0.5px;
+  border-width:0;
+  color:black;
+  background-color:lightgrey;
+}
+#searchbar{
+  display:flex;
+  justify-content:center;
+  border:2px solid gray;
+  margin-left:10%;
+  margin-right:54%;
+  margin-top:2%;
+  margin-bottom:2%;
+  padding:0%;
+  height:20%;
+}
+
+#searchbar{
+  height:41px;
+}
+
+#search_image{
+  margin:1%;
+}
+
+#search{
+  border:none;
+  height: 20px;
+  margin-left:0.5%;
+}
+
+textarea:focus, input:focus { 
+  outline: none; 
+}
+
+#search::placeholder{
+  /* font-weight:bolder; */
+  color:grey;
+}
+
+.card{
+ border:2px solid gray;
+ margin:1.5%;
+ min-width:20% ;
+}
+
+.smallLightText{
+  color:gray;
+  font-size:75%;
+  padding-left:1%;
+}
+
+.boldLargerText{
+  font-weight: bolder;
+  padding-left:1%;
+}
+
+.cardDeck{
+  flex-flow:row wrap;
+  display: flex;
+  margin-left:6%;
+  margin-right:6%;
+  overflow:auto;
+  margin-bottom:2%;
+}
