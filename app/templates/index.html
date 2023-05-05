@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"  type="text/css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
     <title>Remotely</title>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -13,17 +13,31 @@
 <body>
   <nav>
     <div class="logo">
-      <img src="assets/Remotely_Logo.png" alt="Remotely Logo">
+      <img src="/static/Remotely_Logo.png" alt="Remotely Logo">
       <h3 class="logo_thing">Remotely</h3>
     </div>
-    <ul>
-      <a class="workspace-thing" href="./workspaces.html">Workspaces</a>
-      <a class="enterprise-thing" href="./enterprise.html">Enterprise</a>
-      <a class="contact-thing" href="./contact.html">Contact</a>
+    <ul class='navbar-info'>
+      <a class="workspace-thing" href="/workspaces">Workspaces</a>
+      <a class="enterprise-thing" href="/enterprise">Enterprise</a>
+      <a class="contact-thing" href="/contact">Contact</a>
     </ul>
-    <div class="signin-button">
+    <ul class="user-info">
+      {% if current_user.is_anonymous %}
+      <div class="signin-button">
+          <a href="{{ url_for('login') }}">Sign In</a>
+      </div>
+      {% else %}
+        <div class='user-stats'>
+          <a class='name' href="/myprofile">
+            {{ current_user.gname }} &nbsp &nbsp
+          </a>         
+          <a class="nav-link logout" href="{{ url_for('logout') }}">Logout</a>
+        </div>
+        {% endif %}
+    </ul>
+    <!-- <div class="">
       <a href="./signin.html">Sign In</a>
-    </div>
+    </div> -->
     <!-- <div id="user">
       <img src="" id="user_image">
       <h4 id="user_name"></h4>
@@ -37,23 +51,23 @@
           <p class="dropdown_label">Find workspaces in</p>
           <div class="dropdown">
             <button class="dropdown-button dropdown_container">
-              <img class="location-marker" src="assets/location_marker.webp">
+              <img class="location-marker" src="/static/location_marker.webp">
               <p>SF Bay Area</p>
-              <img class='location-triangle' src="assets/down-triangle.jpg">
+              <img class='location-triangle' src="/static/down-triangle.jpg">
             </button>
             <div class="dropdown-content">
               <div class="location-item dropdown-button">
-                <img class="location-marker" src="assets/location_marker.webp">
+                <img class="location-marker" src="/static/location_marker.webp">
                 <i class="fas fa-map-marker-alt"></i>
                 <span>Bay Area, CA</span>
               </div>
               <div class="location-item">
-                <img class="location-marker" src="assets/location_marker.webp">
+                <img class="location-marker" src="/static/location_marker.webp">
                 <i class="fas fa-map-marker-alt"></i>
                 <span>Orange County, CA</span>
               </div>
               <div class="location-item">
-                <img class="location-marker" src="assets/location_marker.webp">
+                <img class="location-marker" src="/static/location_marker.webp">
                 <i class="fas fa-map-marker-alt"></i>
                 <span>Los Angeles, CA</span>
               </div>
@@ -61,7 +75,7 @@
           </div>
         </div>
         <div class="image-selection">
-          <img src="assets/People_in_Cafe.png" alt="People in a Cafe"> 
+          <img src="/static/People_in_Cafe.png" alt="People in a Cafe"> 
         </div>
         <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
     </div>

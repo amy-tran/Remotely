@@ -4,28 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"  type="text/css" />
     <title>Remotely</title>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <meta name="google-signin-client_id" content="313148031300-11cgdrltcnmd89d2mmmk9r465ev86i8p.apps.googleusercontent.com">
 </head>
 <body>
   <nav>
-    <a href="./index.html">
-        <div class="logo">
-            <img src="assets/Remotely_Logo.png" alt="Remotely Logo">
-            <h3 class="logo_thing">Remotely</h3>
-        </div>
+    <a class="logo" href='/'>
+      <img src="/static/Remotely_Logo.png" alt="Remotely Logo">
+      <h3 class="logo_thing">Remotely</h3>
     </a>
-    <ul>
-      <a class="workspace-thing" href="./workspaces.html">Workspaces</a>
-      <a class="enterprise-thing" href="./enterprise.html">Enterprise</a>
-      <a class="contact-thing" href="./contact.html">Contact</a>
+    <ul class='navbar-info'>
+      <a class="workspace-thing" href="/workspaces">Workspaces</a>
+      <a class="enterprise-thing" href="/enterprise">Enterprise</a>
+      <a class="contact-thing" href="/contact">Contact</a>
     </ul>
-    <div class="signin-button">
+    <ul class="user-info">
+      {% if current_user.is_anonymous %}
+      <div class="signin-button">
+          <a href="{{ url_for('login') }}">Sign In</a>
+      </div>
+      {% else %}
+        <div class='user-stats'>
+          <a class='name' href="/myprofile">
+            {{ current_user.gname }} &nbsp &nbsp
+          </a>         
+          <a class="nav-link logout" href="{{ url_for('logout') }}">Logout</a>
+        </div>
+        {% endif %}
+    </ul>
+    <!-- <div class="">
       <a href="./signin.html">Sign In</a>
-    </div>
+    </div> -->
     <!-- <div id="user">
       <img src="" id="user_image">
       <h4 id="user_name"></h4>
@@ -37,47 +49,47 @@
     <hr>
   </div>
   <div id="searchbar">
-    <img id='search_image' src="./assets/magnifier.jpg" height="20px">
+    <img id='search_image' src="/static/magnifier.jpg" height="20px">
     <input id='search' type="text" placeholder="Search Workplaces">
   </div>
   <div class="cardDeck">
     <div class="card">
-        <img src="./assets/dogcafe.png" width="100%">
+        <img src="/static/dogcafe.png" width="100%">
         <p class="boldLargerText">Xochi the dog cafe</p>
         <p class="smallLightText">Oakland, CA</p>
     </div>
     <div class="card">
-        <img src="./assets/dogcafe.png" width="100%">
+        <img src="/static/dogcafe.png" width="100%">
         <p class="boldLargerText">Xochi the dog cafe</p>
         <p class="smallLightText">Oakland, CA</p>
     </div>
     <div class="card">
-        <img src="./assets/dogcafe.png"  width="100%">
+        <img src="/static/dogcafe.png"  width="100%">
         <p class="boldLargerText">Xochi the dog cafe</p>
         <p class="smallLightText">Oakland, CA</p>
     </div>
     <div class="card">
-        <img src="./assets/dogcafe.png"  width="100%">
+        <img src="/static/dogcafe.png"  width="100%">
         <p class="boldLargerText">Xochi the dog cafe</p>
         <p class="smallLightText">Oakland, CA</p>
     </div>
     <div class="card">
-        <img src="./assets/dogcafe.png" width="100%">
+        <img src="/static/dogcafe.png" width="100%">
         <p class="boldLargerText">Xochi the dog cafe</p>
         <p class="smallLightText">Oakland, CA</p>
     </div>
     <div class="card">
-        <img src="./assets/dogcafe.png" width="100%">
+        <img src="/static/dogcafe.png" width="100%">
         <p class="boldLargerText">Xochi the dog cafe</p>
         <p class="smallLightText">Oakland, CA</p>
     </div>
     <div class="card">
-        <img src="./assets/dogcafe.png"  width="100%">
+        <img src="/static/dogcafe.png"  width="100%">
         <p class="boldLargerText">Xochi the dog cafe</p>
         <p class="smallLightText">Oakland, CA</p>
     </div>
     <div class="card">
-        <img src="./assets/dogcafe.png"  width="100%">
+        <img src="/static/dogcafe.png"  width="100%">
         <p class="boldLargerText">Xochi the dog cafe</p>
         <p class="smallLightText">Oakland, CA</p>
     </div>

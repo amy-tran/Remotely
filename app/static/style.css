@@ -1,13 +1,39 @@
 .signin-button a {
   background-color: #66A473;
   color: white;
-  top:34%;
-  right:40%;
   border-radius: 10%;
   text-decoration: none;
+  right:40%;
   /* position:absolute; */
   position:relative;
   padding: 15px 50px;
+}
+
+.user-info{
+  top:24%;
+  z-index:2;
+  border-radius:10%;
+}
+
+.user-stats{
+  background: rgba(255,255,255,0.88);
+  position:relative;
+  padding: 5px 22px;
+}
+
+.name{
+  color:#66A473;
+  font-weight:bolder;
+  
+}
+
+.logout{
+  text-decoration: underline;
+  text-decoration-color:#66A473;
+  text-decoration-thickness:10%;
+  font-weight:bolder;
+  font-size:90%;
+  color:grey;
 }
 
 #user{
@@ -36,9 +62,9 @@ nav {
     width: auto;
   }
   
-  nav ul {
+  nav .navbar-info {
     display: flex;
-    margin-right : 26%;
+    margin-right : 20%;
     margin-left: 4%;
   }
   
