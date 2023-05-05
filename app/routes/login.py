@@ -23,10 +23,10 @@ client = WebApplicationClient(secrets['GOOGLE_CLIENT_ID'])
 
 # When a route is decorated with @login_required and fails this code is run
 # https://flask-login.readthedocs.io/en/latest/#flask_login.LoginManager.unauthorized_handler
-@login_manager.unauthorized_handler
-def unauthorized():
-    flash("You must be logged in to access that content.")
-    return redirect(url_for('index'))
+# @login_manager.unauthorized_handler
+# def unauthorized():
+#     flash("You must be logged in to access that content.")
+#     return redirect(url_for('index'))
 
 # Flask-Login helper to retrieve a user object from our db
 # https://flask-login.readthedocs.io/en/latest/#flask_login.LoginManager.user_loader
@@ -128,16 +128,16 @@ def callback():
         thisUser=User.objects.get(email=gmail)
     except mongoengine.errors.DoesNotExist:
         # if userinfo_response.json().get("hd") == "ousd.org":
-        thisUser = User(
-            gid=gid, 
-            gname=gname, 
-            email=gmail, 
-            gprofile_pic=gprofile_pic,
-            fname = gfname,
-            lname = glname
-        )
-        thisUser.save()
-        thisUser.reload()
+            thisUser = User(
+                gid=gid, 
+                gname=gname, 
+                email=gmail, 
+                gprofile_pic=gprofile_pic,
+                fname = gfname,
+                lname = glname
+            )
+            thisUser.save()
+            thisUser.reload()
         # else:
         #     flash("You must have an ousd.org email to login to this site.")
         #     return redirect(url_for('index'))
